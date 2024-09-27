@@ -17,7 +17,7 @@ WORKDIR /app/stdash
 
 COPY ./requirements.txt ./code/requirements.txt
 
-RUN pip install -r ./requirements.txt
+RUN pip install -r ./code/requirements.txt
 
 EXPOSE 8501
 
