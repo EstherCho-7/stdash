@@ -18,8 +18,8 @@ def load_model():
 
 model = load_model()
 
-st.title("# STEP 3 / Hotdog or Not Hotdog 🤔")
-st.sidebar.markdown("# STEP 3 / Hotdog or Not Hotdog 🤔")
+st.title("# STEP 3-1 / Hotdog or Not Hotdog 🤔")
+st.sidebar.markdown("# STEP 3-1 / Hotdog or Not Hotdog 🤔")
 
 uploaded_file = st.file_uploader("파일을 업로드", type=["png", "jpg", "jpeg"])
 
