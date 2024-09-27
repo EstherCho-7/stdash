@@ -3,8 +3,8 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import requests
 
-st.markdown("# STEP 2 😍")
-st.sidebar.markdown("# STEP 2 😍")
+st.markdown("# STEP 2 / Request user and Prediction model 😍")
+st.sidebar.markdown("# STEP 2 / Request user and Prediction model 😍")
 
 def load_data():
     url='http://43.202.66.118:8015/all'
