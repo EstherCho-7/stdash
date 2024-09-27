@@ -11,7 +11,11 @@ RUN apt-get update && apt-get install -y \
 
 RUN git clone https://github.com/EstherCho-7/stdash.git 
 
-RUN pip install requirements.txt
+WORKDIR /app/stdash
+
+COPY requirements.txt ./
+
+RUN pip install -r requirements.txt
 
 EXPOSE 8501
 
