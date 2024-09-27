@@ -1,6 +1,8 @@
 FROM python:3.9-slim
 
-WORKDIR /app
+WORKDIR /code
+
+COPY src/stdash/app.py /code/
 
 RUN apt-get update && apt-get install -y \
     build-essential \
@@ -13,7 +15,7 @@ RUN git clone https://github.com/EstherCho-7/stdash.git
 
 WORKDIR /app/stdash
 
-COPY requirements.txt ./
+COPY ./requirements.txt ./code/requirements.txt
 
 RUN pip install -r requirements.txt
 
