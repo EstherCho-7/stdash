@@ -21,14 +21,5 @@ requestu=df.groupby('request_user').size()
 df['prediction_model']=df['prediction_model'].astype(str)
 predictionm=df.groupby('prediction_model').size()
 
-
-plt.figure(figsize=(16, 8))
-plt.bar(requestu.index, requestu.values, width=0.4, label='request', color='blue', align='center')
-plt.bar(predictionm.index, predictionm.values, width=0.4, label='predicton', color='red', align="edge")
-
-plt.title('Request user(BLUE) and Prediction(RED) Counts')
-plt.xlabel('time')
-plt.xticks(rotation=45)
-plt.ylabel('count')
-
-st.pyplot(plt)
+st.bar_chart(requestu, x_label='request user', y_label='count', color='#02ccfe')
+st.bar_chart(predictionm, x_label='prediction model', y_label='count', color='#fb6f92')

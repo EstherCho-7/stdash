@@ -23,13 +23,7 @@ df['prediction_time']=pd.to_datetime(df['prediction_time'])
 df['pre_formatted_time']=df['prediction_time'].dt.strftime('%Y-%m-%d %H')
 predictiont=df.groupby('pre_formatted_time').size()
 
-plt.figure(figsize=(12, 6))
-plt.plot(predictiont.index, predictiont.values, marker="^", label='request_time', color="black")
-plt.bar(requestt.index, requestt.values, width=0.4, label='request', color='blue', align='center')
 
-plt.title('Request and Prediction Counts over Time')
-plt.xlabel('time')
-plt.xticks(rotation=45)
-plt.ylabel('count')
+st.line_chart(predictiont, color='#02ccfe')
+st.bar_chart(requestt, x_label='time', y_label='count', color='#fb6f92')
 
-st.pyplot(plt)
