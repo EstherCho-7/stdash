@@ -8,7 +8,7 @@ st.title('CNN JOB MON')
 
 def load_data():
     url='http://43.202.66.118:8015/all'
-    r=requests.get(url)
+    r=requests.get(url, timeout=10)
     d=r.json()
     return d
 
